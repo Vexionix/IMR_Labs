@@ -1,5 +1,8 @@
+* text=auto
 *.xml text eol=lf
 *.mat text eol=lf
 *.cs text eol=lf
 *.meta text eol=lf
-*.unity text eol=lf
+*.unity text eol=lfs
+*.txt text eol=lf
+*.asset text eol=lf
