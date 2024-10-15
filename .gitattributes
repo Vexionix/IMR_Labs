@@ -1,0 +1,5 @@
+*.xml text eol=lf
+*.mat text eol=lf
+*.cs text eol=lf
+*.meta text eol=lf
+*.unity text eol=lf
