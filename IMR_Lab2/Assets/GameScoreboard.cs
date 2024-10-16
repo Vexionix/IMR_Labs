@@ -10,20 +10,19 @@ public class GameScoreboard : MonoBehaviour
 {
     public GameObject scoreboard;
     public TMP_Text scoreText;
-    private int score = 0;
+    private int score = -2;
 
     
     // Start is called before the first frame update
     void Start()
     {
-        Update();
+        
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         score++;
-        Update();
-
+        Debug.Log("score");
     }
 
     // Update is called once per frame

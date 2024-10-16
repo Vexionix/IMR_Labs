@@ -131,7 +131,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 23760699}
-  - component: {fileID: 23760698}
   m_Layer: 0
   m_Name: Scoreboard object
   m_TagString: Untagged
@@ -139,20 +138,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &23760698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23760697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa68ba317fa4516489cc87c05929ca52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreboard: {fileID: 1705377046}
-  scoreText: {fileID: 314148273}
 --- !u!4 &23760699
 Transform:
   m_ObjectHideFlags: 0
@@ -288,13 +273,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314148271}
-  m_LocalRotation: {x: -0.0059765466, y: 0.69401526, z: -0.71991247, w: -0.005761392}
+  m_LocalRotation: {x: -0.005485657, y: 0.6878407, z: 0.7258142, w: 0.0062306058}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1705377047}
-  m_LocalEulerAnglesHint: {x: 92.099, y: 180.952, z: 0}
+  m_LocalEulerAnglesHint: {x: -93.078, y: 180.649, z: -1.598999}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -386.4, y: -113}
@@ -410,6 +395,8 @@ GameObject:
   - component: {fileID: 380405061}
   - component: {fileID: 380405060}
   - component: {fileID: 380405059}
+  - component: {fileID: 380405062}
+  - component: {fileID: 380405063}
   m_Layer: 0
   m_Name: Golf cross
   m_TagString: Untagged
@@ -430,7 +417,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 819218345}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -604,17 +592,59 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380405058}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.0517254, y: 0.36516145, z: -3.0856884}
+  m_LocalRotation: {x: -0, y: -0.710927, z: -0, w: 0.70326585}
+  m_LocalPosition: {x: 3.828, y: 0.264, z: -3.148}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 819218344}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.621, z: 0}
+--- !u!136 &380405062
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380405058}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05
+  m_Height: 0.25
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &380405063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380405058}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68ba317fa4516489cc87c05929ca52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreboard: {fileID: 0}
+  scoreText: {fileID: 314148273}
 --- !u!4 &819218344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4444551842611298218, guid: 1cacd37db68b03b4db52e458d462de33, type: 3}
+  m_PrefabInstance: {fileID: 1749607877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &819218345 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 8469761443107246567, guid: 1cacd37db68b03b4db52e458d462de33, type: 3}
   m_PrefabInstance: {fileID: 1749607877}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &829552631
@@ -958,6 +988,7 @@ GameObject:
   - component: {fileID: 1637418800}
   - component: {fileID: 1637418799}
   - component: {fileID: 1637418798}
+  - component: {fileID: 1637418805}
   m_Layer: 0
   m_Name: Grab Interactable
   m_TagString: Untagged
@@ -1248,13 +1279,27 @@ Transform:
   m_GameObject: {fileID: 1637418797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7633, y: 0.233, z: -3.077}
+  m_LocalPosition: {x: 3.932, y: 0.027, z: -3.811}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 999211711}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1637418805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637418797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa68ba317fa4516489cc87c05929ca52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreboard: {fileID: 0}
+  scoreText: {fileID: 314148273}
 --- !u!1001 &1667876696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1676,7 +1721,7 @@ Transform:
   m_GameObject: {fileID: 2142304288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.222, y: 0.159, z: -3.077}
+  m_LocalPosition: {x: 4.222, y: -0.039, z: -3.811}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
