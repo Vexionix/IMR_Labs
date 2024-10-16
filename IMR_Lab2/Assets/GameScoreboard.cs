@@ -5,15 +5,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using System;
 
 public class GameScoreboard : MonoBehaviour
 {
+    private DateTime lastUpdate = DateTime.MinValue;
+    private readonly TimeSpan updateInterval = TimeSpan.FromSeconds(2);
     public GameObject scoreboard;
     public TMP_Text scoreText;
-    private int score = -2;
+    private int score = -1;
 
     
-    // Start is called before the first frame update
     void Start()
     {
         
@@ -21,8 +23,11 @@ public class GameScoreboard : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        score++;
-        Debug.Log("score");
+        if ((DateTime.Now - lastUpdate) >= updateInterval)
+        {
+            lastUpdate = DateTime.Now;
+            score++;
+        }
     }
 
     // Update is called once per frame
